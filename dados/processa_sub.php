@@ -3,12 +3,12 @@
 	$id = mysqli_real_escape_string($conn, $_POST['id']);
 	$nome_subcategoria = mysqli_real_escape_string($conn, $_POST['nome_subcategoria']);
 
-/*
-	$result_sub = "UPDATE subcategoria SET nome_subcategoria ='$categoria_nome' WHERE id = '$id'";
+
+	$result_sub = "UPDATE subcategoria SET nome_subcategoria ='$nome_subcategoria' WHERE id = '$id'";
 	$resultado_sub = mysqli_query($conn, $result_sub);
 
 
-	//
+	//echo "$id - $nome_subcategoria";
 
 ?>
 <!DOCTYPE html>
@@ -36,7 +36,3 @@
 	</body>
 </html>
 <?php $conn->close(); ?>
-
-*/
-
-echo "$id - $nome";

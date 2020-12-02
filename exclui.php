@@ -183,7 +183,7 @@ include_once("conexao/db_banco.php");
                           <th>Opção</th>
                         </tr>
                       </thead>
-                      <tbody>
+dsssss    <tbody>
                         <?php   
                         $result_usuarios = "SELECT * FROM subcategoria";
                         $resultado_usuarios = mysqli_query($conn, $result_usuarios);
@@ -208,6 +208,7 @@ include_once("conexao/db_banco.php");
                                   <h4 class="modal-title text-center" id="myModalLabel"><?php echo $row_usuario_sub['nome_subcategoria']; ?></h4>
                                 </div>
                                 <div class="modal-body">
+                                  <p><?php echo $row_usuario['id']; ?></p>
                                   <p><?php echo $row_usuario_sub['nome_subcategoria']; ?></p>
                                 </div>
                               </div>
@@ -235,7 +236,7 @@ include_once("conexao/db_banco.php");
                                   <label for="recipient-name" class="col-form-label">Categoria:</label>
                                   <input type="text" name="nome_subcategoria" class="form-control" id="recipient-name">
                                 </div>
-                                <input type="hidden" id="id " name="id">
+                                <input type="hidden" id="id" name="id">
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
                                   <button  type="submit" class="btn btn-danger">Altera</button>
@@ -320,8 +321,8 @@ include_once("conexao/db_banco.php");
     <script type="text/javascript">
       $('#exampleModal_sub').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget) // Button that triggered the modal
-        var recipient = button.data('whatever') 
-        var recipientnome = button.data('whatevernome') // Extract info from data-* attributes
+        var recipient = button.data('whatever_sub') 
+        var recipientnome = button.data('whatevernome_sub') // Extract info from data-* attributes
         // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
         // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
         var modal = $(this)
